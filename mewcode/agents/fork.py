@@ -1,8 +1,3 @@
-# 来源：公众号@小林coding
-# 后端八股网站：xiaolincoding.com
-# Agent网站：xiaolinnote.com
-# 简历模版：jianli.xiaolinnote.com
-
 from __future__ import annotations
 
 import copy
@@ -84,4 +79,3 @@ def build_forked_messages(
 
     fork_conv.add_user_message(f"{FORK_BOILERPLATE}\n\n你的任务：\n{task}")
     return fork_conv
-

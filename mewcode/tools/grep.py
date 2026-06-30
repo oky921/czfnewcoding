@@ -1,8 +1,3 @@
-# 来源：公众号@小林coding
-# 后端八股网站：xiaolincoding.com
-# Agent网站：xiaolinnote.com
-# 简历模版：jianli.xiaolinnote.com
-
 from __future__ import annotations
 
 import re
@@ -59,4 +54,3 @@ class Grep(Tool):
         if not results:
             return ToolResult(output="No matches found.")
         return ToolResult(output="\n".join(results))
-

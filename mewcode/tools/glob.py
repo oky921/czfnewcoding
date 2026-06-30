@@ -1,8 +1,3 @@
-# 来源：公众号@小林coding
-# 后端八股网站：xiaolincoding.com
-# Agent网站：xiaolinnote.com
-# 简历模版：jianli.xiaolinnote.com
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -44,4 +39,3 @@ class Glob(Tool):
         if not matches:
             return ToolResult(output="No files matched the pattern.")
         return ToolResult(output="\n".join(matches))
-

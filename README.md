@@ -6,6 +6,7 @@ MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Te
 ## 目录
 
 - [功能](#功能)
+- [功能展示](#功能展示)
 - [快速开始](#快速开始)
 - [配置](#配置)
 - [运行方式](#运行方式)
@@ -24,6 +25,49 @@ MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Te
 - 多 agent / 团队模式，支持 MCP 协作和任务通知
 - 可扩展工具系统与插件式命令注册
 - 支持工作树管理和本地配置覆盖
+
+## 功能展示
+
+### 1. 简历解析与面试题生成
+
+MewCode 支持通过 skill 机制加载特定领域的智能体能力。例如 `backend-interview` skill 可以解析候选人简历，并自动生成三轮针对性技术面试题，帮助招聘方快速进入面试准备阶段。
+
+<img width="1461" height="616" alt="07dd34ff063b372195a34700791ba638" src="https://github.com/user-attachments/assets/6d6ec783-e92a-499d-b932-06a887e447dc" />
+<img width="1400" height="317" alt="6a99f7dd40badf415772c10551c9c3cf" src="https://github.com/user-attachments/assets/1ab70107-ca3d-4fb7-91e3-bc9eb91dc51a" />
+<img width="1801" height="792" alt="d13c4110060a48305fde4e5124e1f665" src="https://github.com/user-attachments/assets/11bf2774-df11-4e75-b030-6ce23ea65077" />
+
+### 2. 快捷指令系统
+
+通过 `/` 前缀可以快速调用内置指令，例如清空对话历史、压缩上下文、生成规范 commit 信息等。所有指令均支持自动补全和提示，提升终端操作效率。
+
+<img width="1872" height="265" alt="bb4c5cf3cd32cd994144a111fb7492a1" src="https://github.com/user-attachments/assets/4d285e55-2a0e-4e8e-af14-e25064028eea" />
+
+### 3. MCP 服务器集成
+
+MewCode 内置 MCP（Model Context Protocol）客户端，支持接入第三方 MCP 服务器（如 Context7），扩展模型的知识获取和工具调用能力。MCP 服务器状态可通过 `--mcp` 命令查看。
+<img width="1897" height="1031" alt="30ce8048b2f9483009d3eea636977c06" src="https://github.com/user-attachments/assets/ad1d3f3a-266b-4399-b2fd-00222cf947f9" />
+
+### 4. 非交互模式执行
+
+除了完整的终端 UI，MewCode 也支持非交互模式，通过 `-p` 参数直接传入 prompt，快速完成单次问答或任务执行，适合脚本集成和自动化场景。
+<img width="768" height="58" alt="6879956cbbe4cc9cdd52db472a6c3471" src="https://github.com/user-attachments/assets/b7ec9c73-af40-4ffe-ada1-081fdef0fd9a" />
+
+
+### 5. 多 Agent 团队协作
+
+MewCode 内置了完整的 Agent 团队协作框架，支持：
+- 协调者（Coordinator）创建团队并注册成员
+- 工具集按角色动态过滤（四层权限控制）
+- 成员间通过任务系统和邮箱进行异步通信
+- 子任务拆分与结果汇总
+
+内置 Agent 类型包括 Explore、Plan、general-purpose 等，并支持自定义 Agent 加载。系统已验证通过多 Agent 协作流程的端到端测试。
+
+<img width="1828" height="865" alt="278db6a40b9689df499a3c8603e38857" src="https://github.com/user-attachments/assets/b162abf9-97dd-45ea-a937-006d0c246c2f" />
+<img width="1812" height="785" alt="06cd9fbb3d1d4e7bc685b46784556301" src="https://github.com/user-attachments/assets/c36e17b0-f376-4f69-bae5-14916a70c63c" />
+<img width="1071" height="705" alt="0f4298242fe0e9b4f4f91a86cb596842" src="https://github.com/user-attachments/assets/ef5ed905-3838-4c8c-8f55-768e6fb75aad" />
+<img width="1063" height="717" alt="9e338ad2ecd5830b643bb41ddd6bebd7" src="https://github.com/user-attachments/assets/f2f091ac-d37d-41e9-a4c4-b4e83638e878" />
+
 
 ## 快速开始
 

@@ -1,3 +1,4 @@
+# czfMewcoding
 from __future__ import annotations
 
 from mewcode.commands.handlers.clear import CLEAR_COMMAND

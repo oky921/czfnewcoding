@@ -1,3 +1,4 @@
+# czfMewcoding
 from mewcode.agents.parser import AgentDef, AgentParseError, parse_agent_file
 from mewcode.agents.loader import AgentLoader
 from mewcode.agents.tool_filter import resolve_agent_tools

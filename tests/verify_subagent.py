@@ -1,3 +1,4 @@
+# czfMewcoding
 """
 SubAgent 系统端到端验证脚本。
 不依赖 LLM，直接调用核心组件验证所有 Agent 类型和关键流程。

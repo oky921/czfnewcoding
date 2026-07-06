@@ -1,3 +1,4 @@
+# czfMewcoding
 """MCP 客户端系统的测试（第 6 章）。"""
 from __future__ import annotations
 

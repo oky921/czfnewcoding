@@ -1,3 +1,4 @@
+# czfMewcoding
 from mewcode.permissions.checker import Decision, PermissionChecker
 from mewcode.permissions.dangerous import DangerousCommandDetector
 from mewcode.permissions.modes import DecisionEffect, PermissionMode, mode_decide

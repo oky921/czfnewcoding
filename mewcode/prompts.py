@@ -1,3 +1,4 @@
+# czfMewcoding
 """MewCode 的系统提示词（system prompt）构建。"""
 
 from __future__ import annotations

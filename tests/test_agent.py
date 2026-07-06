@@ -1,3 +1,4 @@
+# czfMewcoding
 """Agent Loop 的集成测试 —— 以编程方式逐项验证 checklist。"""
 from __future__ import annotations
 

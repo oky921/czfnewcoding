@@ -55,6 +55,17 @@ def register_skill_commands(
                     ctx.ui.add_system_message(f"未找到 Skill：{name}")
                     return
 
+                if skill.is_directory and skill.source_path is not None:
+                    try:
+                        from mewcode.skills.directory import register_skill_tools
+
+                        register_skill_tools(skill.source_path.parent, exe.agent.registry)
+                    except Exception as e:
+                        ctx.ui.add_system_message(
+                            f"Skill tools registration failed: {e}"
+                        )
+                        return
+
                 if skill.mode == "fork":
                     ctx.ui.add_system_message(f"⏳ Running {name} skill...")
 

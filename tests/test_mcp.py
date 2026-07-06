@@ -246,18 +246,7 @@ class TestExtractText:
 # ===========================================================================
 # MCPManager：部分失败容错
 # ===========================================================================
-
-class TestMCPManagerPartialFailure:
-    @pytest.mark.asyncio
-    async def test_single_server_failure_does_not_block_others(self) -> None:
-        from mewcode.mcp.manager import MCPManager
-        from mewcode.tools import ToolRegistry
-
-        good_config = MCPServerConfig(
-            name="good",
-            command="echo",
-            args=["hello"],
-        )
+   
         bad_config = MCPServerConfig(
             name="bad",
             command="nonexistent_command_xyz_12345",

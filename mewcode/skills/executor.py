@@ -58,7 +58,17 @@ class SkillExecutor:
         self.protocol = protocol
 
 
+    def _register_directory_skill_tools(self, skill: SkillDef) -> None:
+        if not skill.is_directory or skill.source_path is None:
+            return
+
+        from mewcode.skills.directory import register_skill_tools
+
+        register_skill_tools(skill.source_path.parent, self.agent.registry)
+
+
     def execute_inline(self, skill: SkillDef, args: str) -> None:
+        self._register_directory_skill_tools(skill)
         prompt = substitute_arguments(skill.prompt_body, args)
         self.agent.activate_skill(skill.name, prompt)
         if getattr(self.agent, "recovery_state", None) is not None:
@@ -68,6 +78,7 @@ class SkillExecutor:
     async def execute_fork(
         self, skill: SkillDef, args: str
     ) -> str:
+        self._register_directory_skill_tools(skill)
         prompt = substitute_arguments(skill.prompt_body, args)
         if getattr(self.agent, "recovery_state", None) is not None:
             self.agent.recovery_state.record_skill_invocation(

@@ -1,4 +1,4 @@
-MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Textual 构建。
+## MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Textual 构建。
 它支持交互式终端 UI、非交互 prompt 执行、模型提供商接入、权限控制、会话记忆、MCP 多 agent 协作等功能。
 
 ## 目录

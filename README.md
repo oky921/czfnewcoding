@@ -64,7 +64,7 @@
 11. 整体来看，项目已经形成了可继续迭代的完整雏形，后续可以在此基础上继续补强业务规则和解析能力。
 <img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/02ed0a7e-77e6-492c-a64b-bde4b883c5da" />
 
-### 2. 简历解析与面试题生成
+### 2. 简历解析与面试题生成Skill
 
 MewCode 支持通过 skill 机制加载特定领域的智能体能力。例如 `backend-interview` skill 可以解析候选人简历，并自动生成三轮针对性技术面试题，帮助招聘方快速进入面试准备阶段。
 

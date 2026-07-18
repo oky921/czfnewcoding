@@ -1,4 +1,4 @@
-﻿# MewCode
+<img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/96b4f6eb-8a47-4ce8-828e-bc3591c47a6b" />﻿# MewCode
 
 MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Textual 构建。
 它支持交互式终端 UI、非交互 prompt 执行、模型提供商接入、权限控制、会话记忆、MCP 多 agent 协作等功能。
@@ -33,38 +33,37 @@ MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Te
 下面按截图顺序，简单记录这次项目从需求确认到最终落地的完整过程。
 
 1. 先明确了会议纪要整理器的目标和技术路线，前端采用 Vue 3 + Vite + TypeScript，后端采用 Python + FastAPI，整体走前后端分离方案。
+<img width="1291" height="558" alt="image" src="https://github.com/user-attachments/assets/8a885e12-2646-424e-81ce-7a37b38103cc" />
 
-![image-20260717224256144](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717224256144.png)
 2. 随后开始搭建项目骨架，先创建基础目录、README 和依赖文件，把工程最小运行框架先立起来。
+<img width="1347" height="707" alt="image" src="https://github.com/user-attachments/assets/502c0513-5b66-4186-b93b-637643967ddd" />
 
-![image-20260717224240040](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717224240040.png)
 3. 后端部分继续补齐入口文件、数据结构定义和会议文本解析逻辑，为后续接口开发做准备。
+<img width="1026" height="526" alt="image" src="https://github.com/user-attachments/assets/a2525ef1-c122-40bc-9bd9-c476fa8236e1" />
 
-![image-20260717225038183](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225038183.png)
 4. 前端部分同步搭建主入口和页面结构，把会议整理的交互页面先跑通，方便后续联调。
+<img width="1115" height="475" alt="image" src="https://github.com/user-attachments/assets/037037a2-ed19-428b-89bf-e43c7bdb1696" />
 
-![image-20260717225049412](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225049412.png)
 5. 在核心能力上补充会议纪要解析与格式化输出，让后端能够先把原始会议文本转成可用结构。
+<img width="1395" height="792" alt="image" src="https://github.com/user-attachments/assets/b565a682-7c7d-48a1-8d19-c4ad5d324791" />
 
-![image-20260717225926206](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225926206.png)
 6. 再把前后端的调用路径和目录职责理顺，确保页面、接口和解析逻辑各自独立，便于维护。
+<img width="1052" height="527" alt="image" src="https://github.com/user-attachments/assets/dbbafabf-1cf8-4b70-a239-74e03fc73ab7" />
 
-![image-20260717225939495](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225939495.png)
 7. 项目说明文档也一并整理，补充了启动方式、目录结构和基本使用说明，方便后续接手和部署。
+<img width="781" height="582" alt="image" src="https://github.com/user-attachments/assets/06b735f3-7b19-4773-ae1f-a04fb08ee1b4" />
 
-![image-20260717225946364](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225946364.png)
 8. 随着工程逐步成型，继续完善了配置示例和依赖说明，让项目可以更清晰地被复现和启动。
+<img width="1300" height="441" alt="image" src="https://github.com/user-attachments/assets/b50aa0ba-f70f-4e53-8842-66a636b6e363" />
 
-![image-20260717225954094](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225954094.png)
 9. 最终阶段对整体结果做了收尾展示，确认前后端分离结构、基础页面和后端接口都已经落地。
-
 ![image-20260717230653007](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230653007.png)
 10. 过程中也补充了运行环境要求，特别是 Node.js 版本和相关工具链，避免启动时因为环境不一致而报错。
+<img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/fbfdc6f1-e349-46d1-9884-d3f9f7c31cf3" />
 
-![image-20260717230703933](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230703933.png)
 11. 整体来看，项目已经形成了可继续迭代的完整雏形，后续可以在此基础上继续补强业务规则和解析能力。
+![Uploading image.png…]()
 
-![image-20260717230716356](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230716356.png)
 ### 2. 简历解析与面试题生成
 
 MewCode 支持通过 skill 机制加载特定领域的智能体能力。例如 `backend-interview` skill 可以解析候选人简历，并自动生成三轮针对性技术面试题，帮助招聘方快速进入面试准备阶段。

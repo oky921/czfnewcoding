@@ -1696,8 +1696,9 @@ class MewCodeApp(App):
             self._pending_perm_request = None
         # 从聊天区移除权限弹窗组件
         try:
-            widget = self.query_one("#perm-inline", InlinePermissionWidget)
-            widget.remove()
+            widget = event.control
+            if isinstance(widget, InlinePermissionWidget):
+                widget.remove()
         except Exception:
             pass
         # 重新启用输入框

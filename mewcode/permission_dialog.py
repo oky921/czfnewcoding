@@ -39,13 +39,13 @@ class InlinePermissionWidget(Vertical, can_focus=True):
             self.response = response
 
     def __init__(self, tool_name: str, description: str, **kwargs) -> None:
-        super().__init__(id="perm-inline", **kwargs)
+        super().__init__(**kwargs)
         self._tool_name = tool_name
         self._description = description
         self._cursor = 0
 
     def compose(self) -> ComposeResult:
-        yield Static(self._build_content(), id="perm-content")
+        yield Static(self._build_content())
 
 
     def on_mount(self) -> None:
@@ -68,7 +68,7 @@ class InlinePermissionWidget(Vertical, can_focus=True):
 
 
     def _refresh(self) -> None:
-        content = self.query_one("#perm-content", Static)
+        content = self.query_one(Static)
         content.update(self._build_content())
 
     def action_cursor_up(self) -> None:

@@ -1,4 +1,4 @@
-# MewCode
+﻿# MewCode
 
 MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Textual 构建。
 它支持交互式终端 UI、非交互 prompt 执行、模型提供商接入、权限控制、会话记忆、MCP 多 agent 协作等功能。
@@ -28,7 +28,55 @@ MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Te
 
 ## 功能展示
 
-### 1. 简历解析与面试题生成
+### 1. 项目过程与结果
+
+下面按截图顺序，简单记录这次项目从需求确认到最终落地的完整过程。
+
+1. 先明确了会议纪要整理器的目标和技术路线，前端采用 Vue 3 + Vite + TypeScript，后端采用 Python + FastAPI，整体走前后端分离方案。
+
+   ![项目过程 1](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717224256144.png)
+
+2. 随后开始搭建项目骨架，先创建基础目录、README 和依赖文件，把工程最小运行框架先立起来。
+
+   ![项目过程 2](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717224240040.png)
+
+3. 后端部分继续补齐入口文件、数据结构定义和会议文本解析逻辑，为后续接口开发做准备。
+
+   ![项目过程 3](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225038183.png)
+
+4. 前端部分同步搭建主入口和页面结构，把会议整理的交互页面先跑通，方便后续联调。
+
+   ![项目过程 4](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225049412.png)
+
+5. 在核心能力上补充会议纪要解析与格式化输出，让后端能够先把原始会议文本转成可用结构。
+
+   ![项目过程 5](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225926206.png)
+
+6. 再把前后端的调用路径和目录职责理顺，确保页面、接口和解析逻辑各自独立，便于维护。
+
+   ![项目过程 6](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225939495.png)
+
+7. 项目说明文档也一并整理，补充了启动方式、目录结构和基本使用说明，方便后续接手和部署。
+
+   ![项目过程 7](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225946364.png)
+
+8. 随着工程逐步成型，继续完善了配置示例和依赖说明，让项目可以更清晰地被复现和启动。
+
+   ![项目过程 8](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717225954094.png)
+
+9. 最终阶段对整体结果做了收尾展示，确认前后端分离结构、基础页面和后端接口都已经落地。
+
+   ![项目过程 9](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230653007.png)
+
+10. 过程中也补充了运行环境要求，特别是 Node.js 版本和相关工具链，避免启动时因为环境不一致而报错。
+
+    ![项目过程 10](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230703933.png)
+
+11. 整体来看，项目已经形成了可继续迭代的完整雏形，后续可以在此基础上继续补强业务规则和解析能力。
+
+    ![项目过程 11](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230716356.png)
+
+### 2. 简历解析与面试题生成
 
 MewCode 支持通过 skill 机制加载特定领域的智能体能力。例如 `backend-interview` skill 可以解析候选人简历，并自动生成三轮针对性技术面试题，帮助招聘方快速进入面试准备阶段。
 
@@ -36,24 +84,23 @@ MewCode 支持通过 skill 机制加载特定领域的智能体能力。例如 `
 <img width="1400" height="317" alt="6a99f7dd40badf415772c10551c9c3cf" src="https://github.com/user-attachments/assets/1ab70107-ca3d-4fb7-91e3-bc9eb91dc51a" />
 <img width="1801" height="792" alt="d13c4110060a48305fde4e5124e1f665" src="https://github.com/user-attachments/assets/11bf2774-df11-4e75-b030-6ce23ea65077" />
 
-### 2. 快捷指令系统
+### 3. 快捷指令系统
 
 通过 `/` 前缀可以快速调用内置指令，例如清空对话历史、压缩上下文、生成规范 commit 信息等。所有指令均支持自动补全和提示，提升终端操作效率。
 
 <img width="1872" height="265" alt="bb4c5cf3cd32cd994144a111fb7492a1" src="https://github.com/user-attachments/assets/4d285e55-2a0e-4e8e-af14-e25064028eea" />
 
-### 3. MCP 服务器集成
+### 4. MCP 服务器集成
 
 MewCode 内置 MCP（Model Context Protocol）客户端，支持接入第三方 MCP 服务器（如 Context7），扩展模型的知识获取和工具调用能力。MCP 服务器状态可通过 `--mcp` 命令查看。
 <img width="1897" height="1031" alt="30ce8048b2f9483009d3eea636977c06" src="https://github.com/user-attachments/assets/ad1d3f3a-266b-4399-b2fd-00222cf947f9" />
 
-### 4. 非交互模式执行
+### 5. 非交互模式执行
 
 除了完整的终端 UI，MewCode 也支持非交互模式，通过 `-p` 参数直接传入 prompt，快速完成单次问答或任务执行，适合脚本集成和自动化场景。
 <img width="768" height="58" alt="6879956cbbe4cc9cdd52db472a6c3471" src="https://github.com/user-attachments/assets/b7ec9c73-af40-4ffe-ada1-081fdef0fd9a" />
 
-
-### 5. 多 Agent 团队协作
+### 6. 多 Agent 团队协作
 
 MewCode 内置了完整的 Agent 团队协作框架，支持：
 - 协调者（Coordinator）创建团队并注册成员

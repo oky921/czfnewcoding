@@ -1,5 +1,3 @@
-<img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/96b4f6eb-8a47-4ce8-828e-bc3591c47a6b" />﻿# MewCode
-
 MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Textual 构建。
 它支持交互式终端 UI、非交互 prompt 执行、模型提供商接入、权限控制、会话记忆、MCP 多 agent 协作等功能。
 
@@ -57,12 +55,13 @@ MewCode 是一个面向开发者的终端 AI 编码助手，基于 Python 和 Te
 <img width="1300" height="441" alt="image" src="https://github.com/user-attachments/assets/b50aa0ba-f70f-4e53-8842-66a636b6e363" />
 
 9. 最终阶段对整体结果做了收尾展示，确认前后端分离结构、基础页面和后端接口都已经落地。
-![image-20260717230653007](C:\Users\22879\AppData\Roaming\Typora\typora-user-images\image-20260717230653007.png)
+<img width="1207" height="893" alt="image" src="https://github.com/user-attachments/assets/9b08c4a1-050a-4ec7-b9d6-6bb838033936" />
+
 10. 过程中也补充了运行环境要求，特别是 Node.js 版本和相关工具链，避免启动时因为环境不一致而报错。
 <img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/fbfdc6f1-e349-46d1-9884-d3f9f7c31cf3" />
 
 11. 整体来看，项目已经形成了可继续迭代的完整雏形，后续可以在此基础上继续补强业务规则和解析能力。
-![Uploading image.png…]()
+<img width="1132" height="711" alt="image" src="https://github.com/user-attachments/assets/02ed0a7e-77e6-492c-a64b-bde4b883c5da" />
 
 ### 2. 简历解析与面试题生成
 
